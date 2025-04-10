@@ -1,6 +1,6 @@
 import Botton from "../UI/Botton";
 import Image from "./Image/Image";
-import photo from "/623a183aa76fb537cbc5dc0e_Group 8-p-500.png"
+import  photo from "../../public/4k-tech-ulcajgzzc25jlrgi.jpg"
 const ProdactCard = () => {
   return (
     <div className=" max-w-max border-3 border-amber-950 px-2 py-2 flex flex-col gap-3">
@@ -15,10 +15,7 @@ const ProdactCard = () => {
         <p className="px-2">$54545</p>
         <div className="flex items-center gap-1 ">
           <p> Nike </p>
-          <img
-            className="w-10 rounded-full"
-            src={photo}
-          />
+          <img className="w-10 rounded-full" src={photo} />
         </div>
       </div>
 
