@@ -1,13 +1,10 @@
 import Botton from "../UI/Botton";
 import Image from "./Image/Image";
+import photo from "/623a183aa76fb537cbc5dc0e_Group 8-p-500.png"
 const ProdactCard = () => {
   return (
     <div className=" max-w-max border-3 border-amber-950 px-2 py-2 flex flex-col gap-3">
-      <Image
-        alt="mohaed"
-        image="/public/4k-tech-ulcajgzzc25jlrgi.jpg"
-        classname="rounded-2xl"
-      />
+      <Image alt="mohaed" image={photo} classname="rounded-2xl" />
       <h3 className="text-3xl px-2"> Nike shoes </h3>
       <div className="flex gap-2 px-2">
         <span className="w-4 h-4 bg-gray-600 rounded-full " />
@@ -20,7 +17,7 @@ const ProdactCard = () => {
           <p> Nike </p>
           <img
             className="w-10 rounded-full"
-            src="/public/4k-tech-ulcajgzzc25jlrgi.jpg"
+            src={photo}
           />
         </div>
       </div>
