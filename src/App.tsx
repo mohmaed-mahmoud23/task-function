@@ -5,12 +5,10 @@ import Model from "./UI/Model";
 import { Button } from "@headlessui/react";
 
 const App = () => {
-  // state//
   const [isOpen, setIsOpen] = useState(false);
 
-  //hndelr
   function closeModal() {
-    setIsOpen(false);
+    setIsOpen(true);
   }
 
   function openModal() {
@@ -20,26 +18,34 @@ const App = () => {
   const ProdactList = productList.map((prodact) => (
     <ProdactCard key={prodact.id} Prodact={prodact} />
   ));
+
   return (
-    <main className="container mx-auto px-10 my-6  ">
-      <Button
-        className={" bg-red-950"}
-        onClick={() => {
-          openModal();
-        }}
-      >
-        edcddcd
-      </Button>
-      <div className="border-gray-500  grid grid-cols-1 md:grid-cols-2 gap-2 lg:grid-cols-4 md:gap-4 px-2 py-2 mx-auto">
+    <div className="px-4 py-4 mx-auto max-w-7xl">
+      <div className="mb-4 text-right">
+        <button
+          onClick={openModal}
+          className="bg-blue-600 text-white px-4 py-2 rounded-md "
+        >
+          Add
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {ProdactList}
       </div>
-      <Model isOpen={isOpen} closeModal={closeModal} title="xsxsn">
-        <div className="flex gap-4 justify-end mt-4">
-          <Button className="bg-gray-400 px-2 py-2 text-white">Cancel</Button>
-          <Button className="bg-indigo-600 text-white">Submit</Button>
+
+      <Model
+        isOpen={isOpen}
+        onClose={closeModal}
+        title="mohamde"
+        discrobtin="this model"
+      >
+        <div className="flex space-x-3">
+          <Button className="bg-gray-600 px-2 py-2 rounded-md">Cancel</Button>
+          <Button className="bg-red-600 px-2 py-2 rounded-md">Submit</Button>
         </div>
       </Model>
-    </main>
+    </div>
   );
 };
 
