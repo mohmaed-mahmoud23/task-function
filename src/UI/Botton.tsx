@@ -8,7 +8,7 @@ interface Ibutton extends ButtonHTMLAttributes<HTMLButtonElement>  {
 
 const Botton = ({ children, classname, width = "w-full" ,...rest }: Ibutton) => {
   return (
-    <button className={` ${ width } ${classname} bg-gray-500 px-2 py-2`} {...rest}>
+    <button className={` ${ width } ${classname}   px-2 py-2`} {...rest}>
       {children}
     </button>
   );
