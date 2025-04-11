@@ -1,22 +1,11 @@
-module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // لتحديد جميع ملفات JS و JSX و TS و TSX داخل مجلد src
+    "./public/index.html", // إضافة ملف index.html لو كنت تستخدمه
+  ],
   theme: {
-    container: {
-      center: true,
-      padding: "1rem",
-      screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1400px",
-      },
-    },
-    extend: {
-      colors: {
-        brand: "#1da1f2",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

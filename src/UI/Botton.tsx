@@ -1,14 +1,19 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface Ibutton extends ButtonHTMLAttributes<HTMLButtonElement>  {
+interface Ibutton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   classname: string;
   width?: "w-full" | "w-fit";
 }
 
-const Botton = ({ children, classname, width = "w-full" ,...rest }: Ibutton) => {
+const Botton = ({
+  children,
+  classname,
+  width = "w-full",
+  ...rest
+}: Ibutton) => {
   return (
-    <button className={` ${ width } ${classname}   px-2 py-2`} {...rest}>
+    <button className={` ${width} ${classname}   px-2 py-2`} {...rest}>
       {children}
     </button>
   );
