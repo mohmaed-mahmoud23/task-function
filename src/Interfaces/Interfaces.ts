@@ -11,3 +11,11 @@ export interface IProduct {
     imageURL: string;
   };
 }
+
+
+export interface Iform{
+   id:string
+    name:string
+    label: string
+    type :string
+}
