@@ -13,7 +13,11 @@ const Model = ({ isOpen, onClose, title, children, discrobtin }: Iprop) => {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={onClose}>
+        <Dialog
+          as="div"
+          className="relative z-10 backdrop-blur-sm:sm"
+          onClose={onClose}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -23,7 +27,7 @@ const Model = ({ isOpen, onClose, title, children, discrobtin }: Iprop) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-black/25  backdrop-blur-sm" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -45,7 +49,7 @@ const Model = ({ isOpen, onClose, title, children, discrobtin }: Iprop) => {
                     {discrobtin}
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">{title}</p>
+                    <p className="text-md text-gray-500 ">{title}</p>
                   </div>
 
                   <div className="mt-4">

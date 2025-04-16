@@ -1,6 +1,7 @@
+import { prodactname } from "../types/typse";
 
 export interface IProduct {
-  id?: string;
+  id?: string 
   title: string;
   description: string;
   imageURL: string;
@@ -15,7 +16,12 @@ export interface IProduct {
 
 export interface Iform{
    id:string
-    name:string
+    name:prodactname
     label: string
     type :string
+}
+export interface ICategory {
+  id :string
+  name:string
+  imageURL :string
 }

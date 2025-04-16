@@ -9,11 +9,11 @@ interface Ibutton extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Botton = ({
   children,
   classname,
-  width = "w-full",
+
   ...rest
 }: Ibutton) => {
   return (
-    <button className={` ${width} ${classname}   px-2 py-2`} {...rest}>
+    <button className={`  ${classname}    w-full py-2.5`} {...rest}>
       {children}
     </button>
   );

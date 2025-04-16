@@ -1,0 +1,1 @@
+export type prodactname = "title"| "description"|"imageURL" |"price"
