@@ -8,10 +8,10 @@ import { IProduct } from "./Interfaces/Interfaces";
 import { PrudactScema } from "./Schema/ProdactSchema";
 import ERRORMsg from "./Componits/ERRORMsg";
 import CircleColor from "./Componits/CircleColor";
-import { v4 as uuid } from "uuid";
 import Select from "./UI/Select";
 import { prodactname } from "./types/typse";
 import toast, { Toaster } from "react-hot-toast";
+import { v4 as uuid } from "uuid";
 
 const App = () => {
   //stats//
@@ -35,7 +35,6 @@ const App = () => {
   const [editprodact, setEditprodact] = useState<IProduct>(defaultObgect);
   const [editprodactindex, setEditprodactindex] = useState<number>(0);
   const [isOpenConfirmModal, setIsOpenConfirmModal] = useState(false);
-  console.log(editprodactindex); // console.log(them);
   const [error, setError] = useState({
     title: "",
     description: "",
@@ -66,7 +65,7 @@ const App = () => {
   function openConfirmModal() {
     setIsOpenConfirmModal(true);
   }
-  //submitHandelr prodacr//
+  //submitHandelr proudcat//
   function submitHandelr(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
     const { title, description, price, imageURL } = prodact;
@@ -84,12 +83,10 @@ const App = () => {
       setError(errsPrudactScema);
       return;
     }
-    {
-      setProducts((prev) => [
-        { ...prodact, id: uuid(), colors: them, category: selectedcategory },
-        ...prev,
-      ]);
-    }
+    setProducts((prve) => [
+      ...prve,
+      { ...prodact, id: uuid(), category: selectedcategory },
+    ]);
     setProdact(defaultObgect);
     setThem([]);
     closeModal();
@@ -123,7 +120,7 @@ const App = () => {
     setEditprodact(defaultObgect);
     setThem([]);
     closeEditModal();
-    toast.success("sndskjcb")
+    toast.success("");
   }
   //
   //                   / /

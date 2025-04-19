@@ -5,12 +5,14 @@ export const PrudactScema = (prodact: {
   description: string;
   imageURL: string;
   price: string;
+
 }) => {
   const err: {
     title: string;
     description: string;
     imageURL: string;
     price: string;
+    
   } ={ title: "", description: "", imageURL: "", price: "" };
 
   const validUrl = /^(ftp|http|https):\/\/[^ "]+$/.test(prodact.imageURL);
@@ -30,6 +32,7 @@ if(!prodact.imageURL.trim() || !validUrl){
   if(!prodact.description.trim()||prodact.description.length<=10 ||prodact.description.length>100){
     err.description = "title must be between 10 and 80 characters";
   }
+  
   return err;
 };
 export default PrudactScema

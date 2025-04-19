@@ -11,7 +11,7 @@ interface Iprop {
   index: number;
   openEditModal: () => void;
   closeEditModal: () => void;
-  openConfirmModal:()=>void
+  openConfirmModal: () => void;
 }
 
 const ProdactCard = ({
@@ -33,8 +33,8 @@ const ProdactCard = ({
   };
 
   const onremov = () => {
-      setEditprodact(Prodact);
-  
+    setEditprodact(Prodact);
+
     openConfirmModal();
   };
 
