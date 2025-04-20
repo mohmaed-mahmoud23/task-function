@@ -111,7 +111,7 @@ const App = () => {
       return;
     }
 
-    const ubdatPridact = [...products];
+    const ubdatPridact = [...products]; // بسيب نسخه عشان اعمل حاجه اسمها شالو كوبي ودي بتسيبلي نسخه عشان لو حصل اي تغير ميتسخدمش اي حاجه جايه من ال اللآبي اي
     ubdatPridact[editprodactindex] = {
       ...editprodact,
       colors: them.concat(editprodact.colors),
@@ -198,7 +198,7 @@ const App = () => {
     </div>
   ));
 
-  // rendr circlecolors //
+  // render circlecolors //
   const circle = colors.map((color) => (
     <CircleColor
       color={color}
@@ -211,6 +211,7 @@ const App = () => {
             return;
           }
           if (editprodact.colors.includes(color)) {
+            // الشرط بتا الاديت نفسو لو موجود مقدرش اضط عليه تاني
             // هنا بعرفو ان السيم بتاعت الاستيت لو بتحتوي علي ف انت هترترن هتوقف يعني
             setThem((prve) => prve.filter((item) => item !== color)); // السيت سيم هفتح اقواس السيت سيم وقولو البريف و اعدي علي البريف برضو دوت فيلتر وفتح قوس الفلتر وقولو عديلي علي كل ايتم لو الايتيم مش بيساوي القلر هيتسمح
             return;
