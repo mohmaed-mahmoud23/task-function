@@ -25,11 +25,11 @@ if(!prodact.imageURL.trim() || !validUrl){
     err.imageURL = "Invalid URL";
 }
 
-  if(!prodact.title.trim()||prodact.title.length<=10 ||prodact.title.length>80){
+  if(!prodact.title.trim()||prodact.title.length<=10 ||prodact.title.length> 80){
     err.title = "title must be between 10 and 80 characters";
   }
 
-  if(!prodact.description.trim()||prodact.description.length<=10 ||prodact.description.length>100){
+  if(!prodact.description.trim()||prodact.description.length<=10 ||prodact.description.length> 900){
     err.description = "title must be between 10 and 80 characters";
   }
   
